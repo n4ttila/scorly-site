@@ -29,5 +29,15 @@ Every factual claim in `privacy.html` is owed to a document in `scorly-spec`:
 A claim here that the app does not keep is worse than no page at all: this is the document the
 user reads at the moment they are deciding whether to believe the consent screen.
 
+**One of those obligations is enforced rather than trusted.** The Android repository's
+`scripts/check-published-vocabulary.py` compares the event names on this page against the ones the
+app can actually send, and its CI runs it against the **live** page on every push to `main` — so
+publishing an event without editing this page turns that build red, and so does naming an event
+here that the app does not send. Edit `privacy.html` before the app's change lands, not after: the
+check is on their side, and the failure it reports is about this page.
+
+Everything else in the list above is still prose against prose, and is only as good as the person
+changing it.
+
 This repository is public because GitHub Pages serves from public repositories on the free plan.
 It holds nothing that is not already on the internet by intent.
