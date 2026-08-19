@@ -7,22 +7,22 @@
    Nothing here is loaded from another host. */
 
 :root {
-  --primary: #775922;
-  --surface: #FEF8F2;
-  --surface-container: #F3EDE6;
-  --on-surface: #1F1B16;
-  --on-surface-variant: #4E463B;
-  --outline-variant: #CFC5B8;
+  --primary: #7C580D;
+  --surface: #FFF8F3;
+  --surface-container: #F8ECDF;
+  --on-surface: #201B13;
+  --on-surface-variant: #4E4539;
+  --outline-variant: #D2C5B4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #E8C084;
-    --surface: #17130C;
-    --surface-container: #231F1A;
-    --on-surface: #E7E2DB;
-    --on-surface-variant: #CFC5B8;
-    --outline-variant: #4E463B;
+    --primary: #EFBF6D;
+    --surface: #17130B;
+    --surface-container: #241F17;
+    --on-surface: #ECE1D4;
+    --on-surface-variant: #D2C5B4;
+    --outline-variant: #4E4539;
   }
 }
 
