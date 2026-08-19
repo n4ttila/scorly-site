@@ -43,6 +43,16 @@ body {
 
 header { padding: 48px 0 8px; }
 
+/* The mark carries the brand on its own: the name buys no discovery, so the
+   homepage leads with the icon rather than the wordmark alone. */
+.logo {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 0 16px;
+  border-radius: 16px;
+}
+
 .wordmark {
   font-size: 2rem;
   font-weight: 600;
