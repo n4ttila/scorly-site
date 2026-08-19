@@ -1,0 +1,118 @@
+/* Scorly — scorlyapp.com.
+   Colour roles are copied from scorly-spec/design/system/styles.css, which is
+   the app's token sheet. Dark is the app's default scheme; on the web the
+   visitor's own preference decides, so light is the base and dark is the
+   override. Nothing here is loaded from another host. */
+
+:root {
+  --primary: #1B6585;
+  --surface: #F7F9FE;
+  --surface-container: #EBEEF3;
+  --on-surface: #181C20;
+  --on-surface-variant: #41484D;
+  --outline-variant: #C0C7CD;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #8FCFF3;
+    --surface: #101417;
+    --surface-container: #1C2024;
+    --on-surface: #E0E3E8;
+    --on-surface-variant: #C0C7CD;
+    --outline-variant: #41484D;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 16px 64px;
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+.page { max-width: 42rem; margin: 0 auto; }
+
+header { padding: 48px 0 8px; }
+
+.wordmark {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.tagline { color: var(--on-surface-variant); margin: 4px 0 0; }
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin: 40px 0 8px;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 24px 0 4px;
+}
+
+p, ul { margin: 12px 0; }
+li { margin: 6px 0; }
+
+a { color: var(--primary); }
+
+.lede { font-size: 1.1rem; }
+
+.card {
+  background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 24px 0;
+}
+
+.card :first-child { margin-top: 0; }
+.card :last-child { margin-bottom: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.95rem;
+}
+
+.scroll { overflow-x: auto; }
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px 12px 8px 0;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+th { font-weight: 600; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--surface-container);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--outline-variant);
+  color: var(--on-surface-variant);
+  font-size: 0.95rem;
+}
+
+footer a { margin-right: 16px; }
+
+.updated { color: var(--on-surface-variant); font-size: 0.95rem; }
