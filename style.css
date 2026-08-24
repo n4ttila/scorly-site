@@ -1,28 +1,29 @@
 /* Scorly — scorlyapp.com.
    Colour roles are copied from scorly-spec/design/tokens.md, which is the app's
-   token sheet. They are generated from the brass seed chosen by ADR-009; change
-   them here only to follow that document, never on their own.
+   token sheet. They are generated from the greyed-brown seed chosen by ADR-012 —
+   an accent over neutrals deliberately not derived from it — and change here only
+   to follow that document, never on their own.
    Dark is the app's default scheme; on the web the visitor's own preference
    decides, so light is the base and dark is the override.
    Nothing here is loaded from another host. */
 
 :root {
-  --primary: #7C580D;
-  --surface: #FFF8F3;
-  --surface-container: #F8ECDF;
-  --on-surface: #201B13;
-  --on-surface-variant: #4E4539;
-  --outline-variant: #D2C5B4;
+  --primary: #6F5B40;
+  --surface: #F7FAFE;
+  --surface-container: #EBEEF3;
+  --on-surface: #181C1F;
+  --on-surface-variant: #41484D;
+  --outline-variant: #C1C7CD;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #EFBF6D;
-    --surface: #17130B;
-    --surface-container: #241F17;
-    --on-surface: #ECE1D4;
-    --on-surface-variant: #D2C5B4;
-    --outline-variant: #4E4539;
+    --primary: #DDC2A2;
+    --surface: #0F1416;
+    --surface-container: #1C2023;
+    --on-surface: #E0E3E8;
+    --on-surface-variant: #C1C7CD;
+    --outline-variant: #41484D;
   }
 }
 
