@@ -129,7 +129,7 @@ specification, not a setting that can drift.</p>
     <tr><td><code>backup_run</code>, <code>restore_run</code></td><td>A backup or restore finishes</td><td>Manual or scheduled; whether it worked; the reason if not; size as a range</td></tr>
     <tr><td><code>setting_changed</code></td><td>A setting is changed</td><td>Which setting, and which of its fixed values</td></tr>
     <tr><td><code>consent_granted</code></td><td>You turn diagnostics on</td><td>Where you turned it on</td></tr>
-    <tr><td><code>error</code></td><td>A failure you were shown</td><td>A fixed error code, and where it happened</td></tr>
+    <tr><td><code>error</code></td><td>A failure you were shown</td><td>A fixed error code, where it happened, and a fixed reason — whether it was our fault, your account, or your device</td></tr>
     <tr><td><code>deletion_requested</code></td><td>You turn diagnostics off</td><td>Nothing but the installation to delete</td></tr>
     <tr><td><em>a crash</em></td><td>The app stops unexpectedly</td><td>The failure's type and where in Scorly's code it happened; app version, device model, OS version</td></tr>
   </tbody>
