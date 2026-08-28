@@ -21,6 +21,11 @@ Every factual claim in `privacy.html` is owed to a document in `scorly-spec`:
   words rather than property names — **it is complete, and adding an event to the app means
   changing this page in the same sitting**;
 - *what is never sent* is that spec's own list, including the refusal of IP-derived location;
+- *what every event also carries* is that spec's *What the platform attaches* — the nine device
+  and build facts the analytics library adds to every event, **and the fact that everything else
+  it offers is dropped**. Added 2026-08-28, when a real payload showed nineteen such properties
+  arriving where this page implied there were none outside the crash row. Nothing to check it: the
+  vocabulary script compares event names, and a property list has no equivalent;
 - the consent rules — off by default, revocable, deletion on withdrawal, never a condition of
   using anything — are `adr/ADR-006-diagnostics-leave-by-consent.md`;
 - the Drive claims are `features/backup-automatic.md`: the `drive.file` scope, the visible folder
