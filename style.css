@@ -129,3 +129,18 @@ footer {
 footer a { margin-right: 16px; }
 
 .updated { color: var(--on-surface-variant); font-size: 0.95rem; }
+
+/* The one thing a visitor may have come to do. A link rather than Google's own
+   badge image: the badge carries its own brand rules, and this repository loads
+   nothing from another host. */
+.get { margin: 24px 0; }
+
+.get a {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--surface);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 999px;
+}
