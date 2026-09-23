@@ -144,3 +144,9 @@ footer a { margin-right: 16px; }
   padding: 10px 20px;
   border-radius: 999px;
 }
+
+/* AlternativeTo's badge, saved here rather than hotlinked — the site says either
+   is fine, and this repository loads nothing from another host. Below the Play
+   link and smaller than it: it says where else Scorly is listed, not where to get it. */
+.listed { margin: 16px 0; }
+.listed img { display: block; width: 183px; height: auto; }

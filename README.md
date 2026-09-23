@@ -13,6 +13,7 @@ Pages from `main` at the repository root, with `CNAME` pointing it at the apex d
 | `privacy.html` | What leaves the device, what never does, and the complete diagnostics event list |
 | `style.css` | Colour roles copied from `scorly-spec/design/tokens.md` (greyed-brown seed over cool neutrals, `ADR-012`) |
 | `sample-scores.html` | Fifteen public-domain scores for testers to import, and where they came from. `noindex`, and not linked from the homepage — the link is handed out with the test invitation |
+| `alternativeto-light.svg`, `alternativeto-dark.svg` | AlternativeTo's own *Listed on* badge, saved rather than hotlinked — its badge page says self-hosting is fine as long as the link still goes to the listing. Swapped by `prefers-color-scheme`; no script, no external reference inside either file |
 | `scorly-sample-scores.zip` | The pack itself, 2.4 MB. Twelve Mutopia PDFs and three JPEG renders of a Mutopia page, all **Public Domain**, each page saying so in its own footer |
 
 ## The title carries the words people type — revised 2026-09-22
