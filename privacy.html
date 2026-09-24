@@ -21,7 +21,7 @@
 
 <main>
 
-<p class="updated">Last updated 28 August 2026. This policy covers the Scorly app for Android and
+<p class="updated">Last updated 24 September 2026. This policy covers the Scorly app for Android and
 this website.</p>
 
 <div class="card">
@@ -126,7 +126,8 @@ specification, not a setting that can drift.</p>
     <tr><td><code>annotating_session_ended</code></td><td>You stop annotating</td><td>Pen, highlighter or both; whether anything was erased or undone; how many strokes, as a range</td></tr>
     <tr><td><code>search_performed</code></td><td>A search settles</td><td>Whether anything matched, and which field did — never what was typed</td></tr>
     <tr><td><code>feature_used</code></td><td>One of a fixed set of actions</td><td>Which action: pin, archive, lock, add to set, delete, rotate, and similar — never which score</td></tr>
-    <tr><td><code>backup_run</code>, <code>restore_run</code></td><td>A backup or restore finishes</td><td>Manual or scheduled; whether it worked; the reason if not; size as a range</td></tr>
+    <tr><td><code>backup_run</code></td><td>A backup finishes</td><td>Manual or scheduled; whether it worked; the reason if not; size as a range</td></tr>
+    <tr><td><code>restore_run</code></td><td>A restore finishes</td><td>Whether it worked, or was refused; the reason if not</td></tr>
     <tr><td><code>setting_changed</code></td><td>A setting is changed</td><td>Which setting, and which of its fixed values</td></tr>
     <tr><td><code>consent_granted</code></td><td>You turn diagnostics on</td><td>Where you turned it on</td></tr>
     <tr><td><code>error</code></td><td>A failure you were shown</td><td>A fixed error code, where it happened, and a fixed reason — whether it was our fault, your account, or your device</td></tr>
