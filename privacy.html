@@ -21,16 +21,18 @@
 
 <main>
 
-<p class="updated">Last updated 24 September 2026. This policy covers the Scorly app for Android and
+<p class="updated">Last updated 5 October 2026. This policy covers the Scorly app for Android and
 this website.</p>
 
 <div class="card">
   <h3>The short version</h3>
-  <p>Scorly has no accounts and no server of ours. Your scores, setlists, annotations and settings
-  stay on your device. Two things can leave it, and you switch both on yourself: a
-  <strong>backup</strong>, which goes to your own Google Drive, and <strong>diagnostics</strong>,
-  which carry no music, no titles, no file names and nothing you have typed. There is no
-  advertising, no tracking, no profile, and nothing is sold or shared for anyone else's purposes.</p>
+  <p>Scorly works without an account. Your scores, setlists, annotations and settings stay on your
+  device. Three things can leave it, and you switch each on yourself: a <strong>backup</strong>,
+  which goes to your own Google Drive; <strong>diagnostics</strong>, which carry no music, no
+  titles, no file names and nothing you have typed; and, if you <strong>sign in to sync</strong>,
+  who you are — your name and email address, held on Scorly's server in the EU. Signing in sends
+  nothing from your library. There is no advertising, no tracking, no profile, and nothing is sold
+  or shared for anyone else's purposes.</p>
 </div>
 
 <h2>What Scorly keeps on your device</h2>
@@ -72,10 +74,73 @@ rel="noopener">Google Privacy Policy</a>.</p>
 adheres to the <a
 href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes"
 rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.
-Data obtained through Google APIs is used only to provide and improve the backup and restore
-feature you turned on; it is not transferred to anyone else, not used for advertising, and not read
+Data obtained through Google APIs is used only to provide and improve the feature you turned on —
+backup and restore, or signing in to sync; it is not transferred to anyone else, not used for advertising, and not read
 by a human except where you have asked for support with a specific problem, or where the law
 requires it.</p>
+
+<h2>Signing in to sync — optional</h2>
+
+<p>Sync will keep your library the same on every device you have. It is being built, and is in
+testing. Signing in is the only place Scorly asks who you are: it is never required, and nothing
+else in the app depends on it.</p>
+
+<p>You sign in with Google, on Google's own screen. Scorly never asks for, sees, or stores your
+password. Google's screen says it will share your <strong>name, email address and profile
+picture</strong> — that is the fixed set Google shares for any app's <em>Sign in with
+Google</em>. Scorly keeps the name and the address. The link to the picture arrives inside
+Google's sign-in token; Scorly does not store it, show it, or use it.</p>
+
+<h3>What Scorly's server holds for your account</h3>
+
+<ul>
+  <li><strong>An account identifier</strong>, random, made by the server.</li>
+  <li><strong>Your name</strong>, as Google gave it the first time you signed in.</li>
+  <li><strong>Your email address</strong>, as Google gave it the most recent time you signed in.
+    It is shown back to you in the app and to nobody else, and it is never used to identify
+    you.</li>
+  <li><strong>Google's identifier for your Google account</strong>, which is how the server
+    recognises you the next time you sign in, and that the sign-in was with Google.</li>
+  <li><strong>When the account was made</strong>, and when each sign-in was first used.</li>
+  <li><strong>For each device signed in</strong>: a random identifier made by the app for that
+    installation; the device's name as set in Android, or its model if it has none; when it
+    signed in and was last used; and the keys that keep it signed in, stored only as one-way hashes
+    that cannot be turned back into keys.</li>
+  <li><strong>Whether the account may use sync.</strong></li>
+</ul>
+
+<p><strong>No part of your library is sent.</strong> Today the server holds no score, file,
+setlist, tag, annotation or setting. When sync starts to carry your library, this policy will say
+what it carries before that happens.</p>
+
+<h3>Where it is held, and for how long</h3>
+
+<p>The server runs on <a href="https://www.cloudflare.com/privacypolicy/"
+rel="noopener">Cloudflare</a>, acting as a processor for Scorly, and its database is restricted
+to Cloudflare's EU jurisdiction: it is stored in the European Union. Cloudflare is a US company.
+Requests reach the server through Cloudflare's network, which sees the IP address a request comes
+from in order to answer it; Scorly's server does not record it.</p>
+
+<p>What the server holds is kept until you delete the account. A device that is not used for 90
+days has to sign in again; its entry stays with the account until that device next reaches the
+server, or the account is deleted. Signing out removes that device's entry and no other — if the
+device is offline at the time, the entry lapses on its own after 90 days. The account stays.</p>
+
+<h3>Deleting your account</h3>
+
+<p>In Scorly, in <strong>Settings → Sync</strong>, choose <strong>Delete account</strong>. The
+account is deleted at once and for good — its name, address, Google identifier, devices and
+permission to sync — and every other device signed in to it is signed out the next time it is
+online. Nothing on any device is touched: your library stays where it is.</p>
+
+<p>Two things outlast it, briefly. The one-way hashes of the deleted account's sign-in keys are
+kept, linked to nothing else, so that its other devices can be told the account was deleted; each
+is removed once the key it came from would have expired — at most 90 days after that device was
+last used. And Cloudflare's own recovery copies of the database hold earlier states for up to 30
+days, after which the deletion is complete everywhere.</p>
+
+<p>If you do not see a Sync section in Settings, or no longer have a device with Scorly on it, see
+<a href="delete-account.html">Deleting your Scorly account</a>.</p>
 
 <h2>Diagnostics — optional, and off until you say otherwise</h2>
 
@@ -181,13 +246,15 @@ rel="noopener">GitHub Privacy Statement</a>.</p>
 
 <h2>Your rights</h2>
 
-<p>Because Scorly holds no account and no profile, most of what you can ask for you can do
-yourself, immediately and without asking anyone:</p>
+<p>Most of what you can ask for you can do yourself, immediately and without asking anyone:</p>
 
 <ul>
-  <li><strong>See or take your data</strong> — export your whole library to a file from Settings.</li>
+  <li><strong>See or take your data</strong> — export your whole library to a file from Settings.
+    If you signed in to sync, the Sync section shows the name and address the account holds; for
+    a copy of everything listed above, ask us.</li>
   <li><strong>Delete it</strong> — delete scores in the app, delete backup files in your own Drive,
-    and uninstall to remove everything the app holds locally.</li>
+    and uninstall to remove everything the app holds locally. If you signed in to sync, delete the
+    account in Settings → Sync, or <a href="delete-account.html">without the app</a>.</li>
   <li><strong>Withdraw consent</strong> — the diagnostics switch, which also requests deletion of
     what was sent.</li>
   <li><strong>Ask us</strong> — for anything the above does not cover, write to
@@ -195,13 +262,14 @@ yourself, immediately and without asking anyone:</p>
 </ul>
 
 <p>Where the GDPR applies, the legal basis for diagnostics is your consent, which you may withdraw
-at any time; backup is carried out to perform the feature you asked for. You have the right to
+at any time; backup and sync are carried out to perform the features you asked for. You have the right to
 complain to your local data protection authority.</p>
 
 <h2>Children</h2>
 
-<p>Scorly is a tool for reading sheet music and is not directed at children. It collects nothing
-that would identify anyone, of any age.</p>
+<p>Scorly is a tool for reading sheet music and is not directed at children. Without signing in
+to sync, it collects nothing that would identify anyone, of any age; signing in is never needed to
+use the app.</p>
 
 <h2>Changes</h2>
 

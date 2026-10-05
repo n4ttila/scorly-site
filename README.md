@@ -11,6 +11,7 @@ Pages from `main` at the repository root, with `CNAME` pointing it at the apex d
 |---|---|
 | `index.html` | What Scorly is, and where to write about it |
 | `privacy.html` | What leaves the device, what never does, and the complete diagnostics event list |
+| `delete-account.html` | How to delete a sync account, in the app or by email, and what outlasts it. The URL Play's account-deletion field points at |
 | `style.css` | Colour roles copied from `scorly-spec/design/tokens.md` (greyed-brown seed over cool neutrals, `ADR-012`) |
 | `sample-scores.html` | Fifteen public-domain scores for testers to import, and where they came from. `noindex`, and not linked from the homepage — the link is handed out with the test invitation |
 | `alternativeto-light.svg`, `alternativeto-dark.svg` | AlternativeTo's own *Listed on* badge, saved rather than hotlinked — its badge page says self-hosting is fine as long as the link still goes to the listing. Swapped by `prefers-color-scheme`; no script, no external reference inside either file |
@@ -49,6 +50,14 @@ Every factual claim in `privacy.html` is owed to a document in `scorly-spec`:
   using anything — are `adr/ADR-006-diagnostics-leave-by-consent.md`;
 - the Drive claims are `features/backup-automatic.md`: the `drive.file` scope, the visible folder
   and its name, the device and installation identifiers, and what signing out does.
+- the sync claims are `features/sync-sign-in.md` and `api/account.md` — what an account holds,
+  sign-out, deletion and what outlasts it — and `adr/ADR-014-sync-runs-on-cloudflare.md` for the
+  processor and the EU jurisdiction. **Some are only in code**: that the device's name is the one
+  set in Android (`scorly-android`'s `AppContainer.deviceName`), the timestamps the server keeps
+  (`scorly-server`'s schema), the daily removal of a deleted account's hashes (its cron), and the
+  by-hand deletion `delete-account.html` promises (its `scripts/delete-account.sh`). Cloudflare's
+  30-day recovery window is Cloudflare's, read 2026-10-05.
+  When sync starts to carry a library, this page changes before the app does.
 
 A claim here that the app does not keep is worse than no page at all: this is the document the
 user reads at the moment they are deciding whether to believe the consent screen.
