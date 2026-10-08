@@ -57,6 +57,8 @@ found, and the only way to know the request is yours.</p>
   <li>Every device signed in to the account: each installation's identifier, the device's name,
     when it was last used, and the keys that kept it signed in.</li>
   <li>Whether the account may use sync.</li>
+  <li>Your library on the server: every score file, and everything that describes your scores,
+    tags and setlists. An upload still unfinished at the time is discarded within 7 days.</li>
 </ul>
 
 <p>Nothing is deleted from your devices. Your scores, setlists, annotations and settings stay where
@@ -68,8 +70,9 @@ they are, and so do backups in your own Google Drive, which are not part of the 
   <li><strong>One-way hashes of the account's former sign-in keys</strong>, linked to nothing else,
     so that its other devices can be told the account was deleted. Each is removed once the key
     it came from would have expired — at most 90 days after that device was last used.</li>
-  <li><strong>Cloudflare's recovery copies</strong> of the server's database hold earlier states for
-    up to 30 days. After that the deletion is complete everywhere.</li>
+  <li><strong>Cloudflare's recovery copies</strong> of the server's database — which hold what
+    described your scores, tags and setlists, but no file contents — keep earlier states for up to 30
+    days. After that the deletion is complete everywhere.</li>
 </ul>
 
 <p>Nothing else is kept. If you sign in again with the same Google account afterwards, you get a

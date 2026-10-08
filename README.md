@@ -57,7 +57,16 @@ Every factual claim in `privacy.html` is owed to a document in `scorly-spec`:
   (`scorly-server`'s schema), the daily removal of a deleted account's hashes (its cron), and the
   by-hand deletion `delete-account.html` promises (its `scripts/delete-account.sh`). Cloudflare's
   30-day recovery window is Cloudflare's, read 2026-10-05.
-  When sync starts to carry a library, this page changes before the app does.
+  **What sync carries** (*What sync carries*, the library exceptions under *Where it is held*) is
+  `api/library.md`'s kinds — checked field by field against `scorly-android`'s
+  `sync/LibraryRecords.kt`, since a field added there is a field this page must name — and
+  `domain/sync.md`'s *What syncs* and *Entitlement*. Retention is `scorly-server`'s code:
+  `collectLibrary` and `collectFiles` (90 days, 7 for an unfinished upload), the destroy that drops a
+  record's fields at once, and `DELETE /v1/account` with `scripts/delete-account.sh` taking the
+  files. **The six-month deletion after a lapse is the spec's and not yet built**, so this page says
+  the library is kept until the account is deleted; it changes when the collection is built,
+  which is before sync can be paid for. Written 2026-10-08, before any account but the developer's
+  was granted.
 
 A claim here that the app does not keep is worse than no page at all: this is the document the
 user reads at the moment they are deciding whether to believe the consent screen.
