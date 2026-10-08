@@ -21,7 +21,7 @@
 
 <main>
 
-<p class="updated">Last updated 5 October 2026. This policy covers the Scorly app for Android and
+<p class="updated">Last updated 8 October 2026. This policy covers the Scorly app for Android and
 this website.</p>
 
 <div class="card">
@@ -119,7 +119,10 @@ what it carries before that happens.</p>
 rel="noopener">Cloudflare</a>, acting as a processor for Scorly, and its database is restricted
 to Cloudflare's EU jurisdiction: it is stored in the European Union. Cloudflare is a US company.
 Requests reach the server through Cloudflare's network, which sees the IP address a request comes
-from in order to answer it; Scorly's server does not record it.</p>
+from in order to answer it; Scorly's server does not record it. When a request fails, the server
+writes one line saying which kind of request it was, what went wrong, and which version of the app
+sent it — never who sent it, from where, or what it carried. Those lines are kept for seven days,
+so that a fault can be found before anyone has to report it.</p>
 
 <p>What the server holds is kept until you delete the account. A device that is not used for 90
 days has to sign in again; its entry stays with the account until that device next reaches the
@@ -196,6 +199,7 @@ specification, not a setting that can drift.</p>
     <tr><td><code>setting_changed</code></td><td>A setting is changed</td><td>Which setting, and which of its fixed values</td></tr>
     <tr><td><code>consent_granted</code></td><td>You turn diagnostics on</td><td>Where you turned it on</td></tr>
     <tr><td><code>error</code></td><td>A failure you were shown</td><td>A fixed error code, where it happened, and a fixed reason — whether it was our fault, your account, or your device</td></tr>
+    <tr><td><code>sync_failed</code></td><td>Sync failed in a way you were shown</td><td>Which step — the library, a file going up or coming down, or signing in; a fixed error code; for a file, its size as a range — never which score or which account</td></tr>
     <tr><td><code>deletion_requested</code></td><td>You turn diagnostics off</td><td>Nothing but the installation to delete</td></tr>
     <tr><td><em>a crash</em></td><td>The app stops unexpectedly</td><td>The failure's type and where in Scorly's code it happened; app version, device model, OS version</td></tr>
   </tbody>
