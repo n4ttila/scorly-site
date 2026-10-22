@@ -15,6 +15,7 @@ Pages from `main` at the repository root, with `CNAME` pointing it at the apex d
 | `style.css` | Colour roles copied from `scorly-spec/design/tokens.md` (greyed-brown seed over cool neutrals, `ADR-012`) |
 | `sample-scores.html` | Fifteen public-domain scores for testers to import, and where they came from. `noindex`, and not linked from the homepage — the link is handed out with the test invitation |
 | `alternativeto-light.svg`, `alternativeto-dark.svg` | AlternativeTo's own *Listed on* badge, saved rather than hotlinked — its badge page says self-hosting is fine as long as the link still goes to the listing. Swapped by `prefers-color-scheme`; no script, no external reference inside either file |
+| `review/device-names.png` | A screenshot of the iOS app's restore list, showing backups labelled by device name. Linked from Apple's request for the user-assigned-device-name entitlement (2026-10-22), which wants a public screenshot while it is reviewed; not linked from any page. Remove it once Apple has answered |
 | `scorly-sample-scores.zip` | The pack itself, 2.4 MB. Twelve Mutopia PDFs and three JPEG renders of a Mutopia page, all **Public Domain**, each page saying so in its own footer |
 
 ## The title carries the words people type — revised 2026-09-22
