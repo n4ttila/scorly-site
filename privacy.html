@@ -47,7 +47,8 @@ device.</p>
 <h2>Backup to Google Drive — optional</h2>
 
 <p>If you turn on backup, Scorly signs in to a Google account <strong>you</strong> choose, using
-Google's own account chooser. Scorly never asks for, sees, or stores your password.</p>
+Google's own account chooser — on iPhone and iPad, Google's sign-in page in the system's secure
+browser sheet. Scorly never asks for, sees, or stores your password.</p>
 
 <ul>
   <li><strong>The permission asked for is the narrowest one that works</strong> — the
@@ -64,6 +65,11 @@ Google's own account chooser. Scorly never asks for, sees, or stores your passwo
     person, mean nothing outside that folder, and are not sent anywhere else. They exist so that
     two tablets do not overwrite each other's backups, and so that a fresh installation cannot
     silently replace a backup it cannot account for.</li>
+  <li><strong>Beside them, so that a restore can show which backup is which without downloading
+    any</strong>: the device's name, when the backup was made, how many scores and setlists it
+    holds, and its format. The name is the one set in Android; on iPhone and iPad it is the model,
+    such as “iPhone 17 Pro Max”, unless Apple has let Scorly read the name you gave the device.
+    These labels are kept with the file in your own Drive and nowhere else.</li>
   <li><strong>Signing out</strong> turns backup off and hands the Drive permission back. It leaves
     files already in your account alone — Scorly does not delete your files.</li>
 </ul>
