@@ -21,8 +21,8 @@
 
 <main>
 
-<p class="updated">Last updated 11 October 2026. This policy covers the Scorly app for Android and
-this website.</p>
+<p class="updated">Last updated 23 October 2026. This policy covers the Scorly app for Android, the
+Scorly app for iPhone and iPad, and this website. Where the two apps differ, it says so.</p>
 
 <div class="card">
   <h3>The short version</h3>
@@ -83,7 +83,8 @@ requires it.</p>
 
 <h2>Signing in to sync — optional</h2>
 
-<p>Sync keeps your library the same on every device you have. It is in testing. Signing in is the only place Scorly asks who you are: it is never required, and nothing
+<p>Sync keeps your library the same on every device you have. It is in testing, on Android only:
+the iPhone and iPad app has no sync and no sign-in to Scorly. Signing in is the only place Scorly asks who you are: it is never required, and nothing
 else in the app depends on it.</p>
 
 <p>You sign in with Google, on Google's own screen. Scorly never asks for, sees, or stores your
@@ -262,13 +263,13 @@ specification, not a setting that can drift.</p>
 
 <h3>What every event also carries</h3>
 
-<p>Alongside the table above, each event carries nine facts about the app and the device it is
-running on. They are listed here rather than repeated in every row.</p>
+<p>Alongside the table above, each event carries up to nine facts about the app and the device it
+is running on. They are listed here rather than repeated in every row.</p>
 
 <ul>
   <li>The app's version and build number</li>
-  <li>The device's make and model, and the version of Android on it</li>
-  <li>The screen's width, height and pixel density</li>
+  <li>The device's make and model, and the version of Android, iOS or iPadOS on it</li>
+  <li>The screen's width and height, and on Android its pixel density</li>
 </ul>
 
 <p>That is the complete list, and the app drops anything else the analytics library tries to
@@ -283,6 +284,10 @@ screen that fits them is a question nothing else on this page can answer.</p>
 EU-hosted service, acting as a processor for Scorly. Events collected while you are offline wait on
 the device, for no longer than seven days, and are dropped if they cannot be sent.</p>
 
+<p>On iPhone and iPad, a crash report says where it happened as addresses in Scorly's own program.
+They are turned into the names of Scorly's functions with the debug symbols Scorly uploads from its
+own build to PostHog; nothing from your device is needed for that.</p>
+
 <p>Each installation of the app has a random identifier so that events from one device can be
 counted as one device. It is created by the app, is not derived from anything about you or your
 hardware, and is discarded when you turn diagnostics off.</p>
@@ -292,7 +297,8 @@ hardware, and is discarded when you turn diagnostics off.</p>
 <p>The switch is in Settings, under Help improve Scorly. Turning it off stops collection
 immediately and permanently — you will not be asked again — and <strong>requests deletion of what
 was already sent</strong> for that installation. Reinstalling the app also starts you at off, with
-a new identifier.</p>
+a new identifier, and so does restoring your device from a backup or moving to a new one: the
+choice belongs to the device you made it on.</p>
 
 <h2>This website</h2>
 
