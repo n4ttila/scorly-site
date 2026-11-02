@@ -130,23 +130,20 @@ footer a { margin-right: 16px; }
 
 .updated { color: var(--on-surface-variant); font-size: 0.95rem; }
 
-/* The one thing a visitor may have come to do. A link rather than Google's own
-   badge image: the badge carries its own brand rules, and this repository loads
-   nothing from another host. */
+/* The one thing a visitor may have come to do. Google's own badge, saved here
+   rather than hotlinked, since this repository loads nothing from another host.
+   The PNG carries the clear space Google asks for, so it gets no padding of its
+   own; its brand rules want it unaltered and the trademark line in the footer.
+   No App Store badge until the iOS app is live: Apple's may only point at an
+   app that can be downloaded, so until then iOS is the line of text below it. */
 .get { margin: 24px 0; }
+.get img { display: block; width: 200px; height: auto; margin-left: -13px; }
+.get .soon { margin: 4px 0 0; color: var(--on-surface-variant); font-size: 0.95rem; }
 
-.get a {
-  display: inline-block;
-  background: var(--primary);
-  color: var(--surface);
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 999px;
-}
+.legal { margin: 12px 0 0; font-size: 0.85rem; }
 
 /* AlternativeTo's badge, saved here rather than hotlinked — the site says either
    is fine, and this repository loads nothing from another host. Below the Play
-   link and smaller than it: it says where else Scorly is listed, not where to get it. */
+   badge and smaller than it: it says where else Scorly is listed, not where to get it. */
 .listed { margin: 16px 0; }
 .listed img { display: block; width: 183px; height: auto; }
