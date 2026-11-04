@@ -262,6 +262,7 @@ specification, not a setting that can drift.</p>
     <tr><td><code>consent_granted</code></td><td>You turn diagnostics on</td><td>Where you turned it on</td></tr>
     <tr><td><code>error</code></td><td>A failure you were shown</td><td>A fixed error code, where it happened, and a fixed reason — whether it was our fault, your account, or your device</td></tr>
     <tr><td><code>sync_failed</code></td><td>Sync failed in a way you were shown</td><td>Which step — the library, a file going up or coming down, or signing in; a fixed error code; for a file, its size as a range — never which score or which account</td></tr>
+    <tr><td><code>storage_repaired</code></td><td>Scorly frees space it should not have been holding</td><td>Which kind — a second copy of a score's file, or a backup left after restoring; how much space as a range — never which score</td></tr>
     <tr><td><code>deletion_requested</code></td><td>You turn diagnostics off</td><td>Nothing but the installation to delete</td></tr>
     <tr><td><em>a crash</em></td><td>The app stops unexpectedly</td><td>The failure's type and where in Scorly's code it happened; app version, device model, OS version</td></tr>
   </tbody>
