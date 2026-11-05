@@ -21,7 +21,7 @@
 
 <main>
 
-<p class="updated">Last updated 4 November 2026. This policy covers the Scorly app for Android, the
+<p class="updated">Last updated 5 November 2026. This policy covers the Scorly app for Android, the
 Scorly app for iPhone and iPad, and this website. Where the two apps differ, it says so.</p>
 
 <div class="card">
@@ -31,8 +31,8 @@ Scorly app for iPhone and iPad, and this website. Where the two apps differ, it 
   which goes to your own Google Drive; <strong>diagnostics</strong>, which carry no music, no
   titles, no file names and nothing you have typed; and <strong>sync</strong>, which holds who you
   are — your name and email address — and, once you start it, your library: the score files and
-  what describes them, your tags and setlists, on Scorly's server in the EU. Annotations stay on
-  your device. There is no advertising, no tracking, no profile, and nothing is sold
+  what describes them, your tags and setlists, your annotations, sticky notes and stage paper, on
+  Scorly's server in the EU. There is no advertising, no tracking, no profile, and nothing is sold
   or shared for anyone else's purposes.</p>
 </div>
 
@@ -89,29 +89,39 @@ requires it.</p>
 
 <h2>Signing in to sync — optional</h2>
 
-<p>Sync keeps your library the same on every device you have. It is in testing, on Android only:
-the iPhone and iPad app has no sync and no sign-in to Scorly. Signing in is the only place Scorly asks who you are: it is never required, and nothing
+<p>Sync keeps your library the same on every device you have. It is in testing, by invitation, on
+Android and on iPhone and iPad: the apps show it only to testers, and the server decides which
+accounts may use it. Signing in is the only place Scorly asks who you are: it is never required, and nothing
 else in the app depends on it.</p>
 
-<p>You sign in with Google, on Google's own screen. Scorly never asks for, sees, or stores your
+<p>On Android you sign in with Google; on iPhone and iPad, with Google or with Apple. Either way
+it happens on the provider's own screen, and Scorly never asks for, sees, or stores your
 password. Google's screen says it will share your <strong>name, email address and profile
 picture</strong> — that is the fixed set Google shares for any app's <em>Sign in with
 Google</em>. Scorly keeps the name and the address. The link to the picture arrives inside
 Google's sign-in token; Scorly does not store it, show it, or use it.</p>
 
+<p>With <em>Sign in with Apple</em>, Scorly asks Apple for your <strong>email address</strong>
+and nothing else — not your name. If you choose <em>Hide My Email</em>, the address is one Apple
+makes for Scorly and forwards to you, and Scorly never learns your own.</p>
+
 <h3>What Scorly's server holds for your account</h3>
 
 <ul>
   <li><strong>An account identifier</strong>, random, made by the server.</li>
-  <li><strong>Your name</strong>, as Google gave it the first time you signed in.</li>
-  <li><strong>Your email address</strong>, as Google gave it the most recent time you signed in.
+  <li><strong>Your name</strong>, as Google gave it the first time you signed in. An account made
+    with Apple has no name.</li>
+  <li><strong>Your email address</strong>, as Google or Apple gave it the most recent time you
+    signed in.
     It is shown back to you in the app and to nobody else, and it is never used to identify
     you.</li>
-  <li><strong>Google's identifier for your Google account</strong>, which is how the server
-    recognises you the next time you sign in, and that the sign-in was with Google.</li>
+  <li><strong>Google's or Apple's identifier for your account with them</strong>, which is how the
+    server recognises you the next time you sign in, and which of the two the sign-in was
+    with.</li>
   <li><strong>When the account was made</strong>, and when each sign-in was first used.</li>
   <li><strong>For each device signed in</strong>: a random identifier made by the app for that
-    installation; the device's name as set in Android, or its model if it has none; when it
+    installation; the device's name as set in Android, or its model if it has none — on iPhone and iPad, its model,
+    such as “iPhone 17 Pro Max”, unless Apple has let Scorly read the name you gave the device; when it
     signed in and was last used; and the keys that keep it signed in, stored only as one-way hashes
     that cannot be turned back into keys.</li>
   <li><strong>Whether the account may use sync.</strong></li>
@@ -134,17 +144,20 @@ from there to your other signed-in devices:</p>
     For each file, its type, size and page count, whether you imported it or Scorly made it, and
     for pages Scorly made, how they were laid out.</li>
   <li><strong>Your tags and setlists</strong> — their names and colours; for a setlist, when it was
-    made, its tags, which scores are in it and in what order, and whether it is pinned, archived or
-    locked.</li>
+    made, its performance date if it has one and whether you declined to archive it after that day, its tags, which scores are in it and in what order,
+    and whether it is pinned, archived or locked.</li>
+  <li><strong>What you wrote on them</strong> — pen and highlighter strokes and text typed on a
+    page; sticky notes, with their place, size, colour and what is written or typed on them; and
+    each setlist's stage paper: its photographs, imported and blank pages, their colour and order,
+    and what is written on them. A stroke you erase is marked as erased, so that it is gone on
+    every device.</li>
   <li><strong>The trash</strong> — what is in it and since when, so that a score deleted on one
     device is deleted, and can be restored, on all of them.</li>
   <li><strong>For every change, when it was made and the identifier of the installation that
     made it</strong>, so that two devices agree on which change came last.</li>
 </ul>
 
-<p><strong>Annotations stay on the device they were made on</strong> — pen and highlighter
-strokes, text typed on a page, notes on a page and a setlist's note are not sent. Neither are your
-settings, the library's sort and filters, or anything to do with backup or diagnostics.</p>
+<p><strong>Not sent</strong>: your settings, the library's sort and filters, or anything to do with backup or diagnostics.</p>
 
 <h3>Where it is held, and for how long</h3>
 
@@ -159,6 +172,10 @@ from in order to answer it; Scorly's server does not record it. When a request f
 writes one line saying which kind of request it was, what went wrong, and which version of the app
 sent it — never who sent it, from where, or what it carried. Those lines are kept for seven days,
 so that a fault can be found before anyone has to report it.</p>
+
+<p>While a syncing app is open, it keeps a connection to the server, so that it hears within
+seconds that something changed on another of your devices and fetches it. The connection carries
+nothing from your library, and it is closed when the app leaves the screen.</p>
 
 <p>What the server holds is kept until you delete the account, with these exceptions for your
 library:</p>
@@ -192,7 +209,7 @@ device is offline at the time, the entry lapses on its own after 90 days. The ac
 <h3>Deleting your account</h3>
 
 <p>In Scorly, in <strong>Settings → Sync</strong>, choose <strong>Delete account</strong>. The
-account is deleted at once and for good — its name, address, Google identifier, devices and
+account is deleted at once and for good — its name, address, Google or Apple identifier, devices and
 permission to sync, and your library on the server with every file in it — and every other device signed in to it is signed out the next time it is
 online. Nothing on any device is touched: your library stays where it is.</p>
 
@@ -200,7 +217,7 @@ online. Nothing on any device is touched: your library stays where it is.</p>
 kept, linked to nothing else, so that its other devices can be told the account was deleted; each
 is removed once the key it came from would have expired — at most 90 days after that device was
 last used. And Cloudflare's own recovery copies of the database — which hold what described your
-scores, tags and setlists, but no file contents — keep earlier states for up to 30 days, after
+scores, tags and setlists and what you wrote on them, but no file contents — keep earlier states for up to 30 days, after
 which the deletion is complete everywhere.</p>
 
 <p>If you do not see a Sync section in Settings, or no longer have a device with Scorly on it, see

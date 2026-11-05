@@ -69,6 +69,12 @@ Every factual claim in `privacy.html` is owed to a document in `scorly-spec`:
   the library is kept until the account is deleted; it changes when the collection is built,
   which is before sync can be paid for. Written 2026-10-08, before any account but the developer's
   was granted.
+  **Marks, sticky notes and stage paper** are `features/sync-annotations-and-notes.md`
+  (`SPEC-SYNC-003`), and the connection kept while the app is open is `features/sync-live.md`
+  (`SPEC-SYNC-004`): it carries no records. **Sign in with Apple** is `scorly-ios`'s
+  `docs/features/sync.md` and code: `AppleProvider.scopes` asks for the email only, so an Apple
+  account has no name, and the iPhone's device name is `DriveIdentity.deviceName`, the same as
+  backup's. Brought in 2026-11-05, before the iOS app's first build with sync went to review.
 
 A claim here that the app does not keep is worse than no page at all: this is the document the
 user reads at the moment they are deciding whether to believe the consent screen.
