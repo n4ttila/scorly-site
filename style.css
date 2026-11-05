@@ -134,11 +134,13 @@ footer a { margin-right: 16px; }
    rather than hotlinked, since this repository loads nothing from another host.
    The PNG carries the clear space Google asks for, so it gets no padding of its
    own; its brand rules want it unaltered and the trademark line in the footer.
-   No App Store badge until the iOS app is live: Apple's may only point at an
-   app that can be downloaded, so until then iOS is the line of text below it. */
-.get { margin: 24px 0; }
+   Apple's badge, beside it since the iOS app went live on 2026-11-05, is Apple's
+   own SVG, unaltered, with no clear space in the file: it is set at the height of
+   Google's visible badge (52px of the PNG's 77), and the PNG's own 13px margin is
+   the gap between them, which Apple's quarter-height clear space asks for. */
+.get { margin: 24px 0; display: flex; flex-wrap: wrap; align-items: center; }
 .get img { display: block; width: 200px; height: auto; margin-left: -13px; }
-.get .soon { margin: 4px 0 0; color: var(--on-surface-variant); font-size: 0.95rem; }
+.get img.app-store { width: 156px; height: 52px; margin: 0 0 0 0; }
 
 .legal { margin: 12px 0 0; font-size: 0.85rem; }
 
