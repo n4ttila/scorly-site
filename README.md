@@ -57,7 +57,7 @@ Every factual claim in `privacy.html` is owed to a document in `scorly-spec`:
   sign-out, deletion and what outlasts it — and `adr/ADR-014-sync-runs-on-cloudflare.md` for the
   processor and the EU jurisdiction. **Some are only in code**: that the device's name is the one
   set in Android (`scorly-android`'s `AppContainer.deviceName`), the timestamps the server keeps
-  (`scorly-server`'s schema), the daily removal of a deleted account's hashes (its cron), and the
+  (`scorly-server`'s schema), the daily removal of a deleted account's hashes and of a session 90 days unused (its cron), and the
   by-hand deletion `delete-account.html` promises (its `scripts/delete-account.sh`). Cloudflare's
   30-day recovery window is Cloudflare's, read 2026-10-05.
   **What sync carries** (*What sync carries*, the library exceptions under *Where it is held*) is
